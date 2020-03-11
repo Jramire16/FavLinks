@@ -65,7 +65,7 @@ class Form extends Component {
                     <input
                         type="url"
                         value={this.state.favLink}
-                        onChange={this.updateNameLabel}
+                        onChange={this.urlChange}
                 />
                 <button type="submit">Submit</button>
                 </form>

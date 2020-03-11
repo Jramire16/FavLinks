@@ -10,55 +10,26 @@ class LinkContainer extends React.Component {
         super(props)
         /* TODO - Create state object for storing favLinks */
         this.state = {
-            favLinks: [],
-            filter: ''
+            favLinks: []
 
         }
-       /* this.handleSubmit = this.handleSubmit.bind(this)
-        this.removeCharacter = this.removeCharacter.bind(this)*/
-        // this.removeLink = this.removeLink.bind(this)
-        // this.favLink = this.favLink.bind(this)
+       
 
     }
     
-    favLink(event) {
-        this.props.favLink(this.state.favLink)
-        this.setState({
-            newLink: ''
-        })
-    }
 
-    removeCharacter = function(index) {
-        
+    removeCharacter = function(index) {    
         /*
             TODO - Create logic for setting the state to filter array and remove favLink at index
         */ 
-       this.props.favLink(this.state.favLinks)
+      
        this.setState((state) => ({
            favLinks: state.favLinks.filter((value, i) => i !== index)
        }))
        
 
     }
-    // removeLink: function([favLinks]) {
-    //     favLinks = [];  
-    //     favLinks.filter(index, 1);
-    //     this.setState({favLinks});
-
-    // }
-    // removeLink = favLink => {
-    //     this.favLink(this.state.favLinks)
-    //     this.setState((state) => ({
-    //         favLinks.filter
-    //     }))
-    // }
     
-    // removeLink = favLink => {
-    //     this.favLink.map(this.state.favLinks)
-    //     this.setState((state) => ({
-    //         favLinks: state.favLinks.splice((row, i) => i !== favLink)
-    //     }))
-    // }
 
     handleSubmit = favLink => {
         /*
@@ -89,7 +60,35 @@ class LinkContainer extends React.Component {
         );
     }
 }
+// favLink(event) {
+    //     this.props.favLink(this.state.favLink)
+    //     this.setState({
+    //         newLink: ''
+    //     })
+    // }
+// removeLink: function([favLinks]) {
+    //     favLinks = [];  
+    //     favLinks.filter(index, 1);
+    //     this.setState({favLinks});
 
+    // }
+    // removeLink = favLink => {
+    //     this.favLink(this.state.favLinks)
+    //     this.setState((state) => ({
+    //         favLinks.filter
+    //     }))
+    // }
+    
+    // removeLink = favLink => {
+    //     this.favLink.map(this.state.favLinks)
+    //     this.setState((state) => ({
+    //         favLinks: state.favLinks.splice((row, i) => i !== favLink)
+    //     }))
+    // }
+    /* this.handleSubmit = this.handleSubmit.bind(this)
+        this.removeCharacter = this.removeCharacter.bind(this)*/
+        // this.removeLink = this.removeLink.bind(this)
+        // this.favLink = this.favLink.bind(this)
 
 
 export default LinkContainer;
